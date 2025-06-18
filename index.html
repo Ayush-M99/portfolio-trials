@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Mishra | Portfolio</title>
+
+  <!-- Fonts & External Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Theme Toggle Button -->
+  <label class="theme-switch">
+    <input type="checkbox" class="theme-switch__checkbox">
+    <div class="theme-switch__container">
+      <div class="theme-switch__clouds"></div>
+      <div class="theme-switch__stars-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+          <path d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447..." fill="currentColor" />
+        </svg>
+      </div>
+      <div class="theme-switch__circle-container">
+        <div class="theme-switch__sun-moon-container">
+          <div class="theme-switch__moon">
+            <div class="theme-switch__spot"></div>
+            <div class="theme-switch__spot"></div>
+            <div class="theme-switch__spot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </label>
+
+  <!-- Navbar -->
+  <header class="main-header">
+    <div class="logo">AYUSH MISHRA</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#domain">Domain</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="about-content" data-aos="fade-up">
+      <h1>Hi, I'm Ayush</h1>
+      <p class="typewriter"></p>
+      <div class="social-links">
+        <a href="mailto:officially.ayush99@gmail.com">📧</a>
+        <a href="https://github.com/Ayush-M99">🐙</a>
+        <a href="https://linkedin.com/in/ayushmishra99">💼</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain Section -->
+  <section id="domain" class="section">
+    <h2>What I Do</h2>
+    <div class="domain-cards">
+      <div class="card" data-aos="fade-up"><h3>Machine Learning</h3><p>TensorFlow, PyTorch, CNNs, Scikit-learn</p></div>
+      <div class="card" data-aos="fade-up"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
+      <div class="card" data-aos="fade-up"><h3>Backend</h3><p>Node.js, SQL, MongoDB</p></div>
+      <div class="card" data-aos="fade-up"><h3>Full-Stack</h3><p>REST APIs, GitHub Actions</p></div>
+      <div class="card" data-aos="fade-up"><h3>Robotics</h3><p>OpenCV, ROS, UAVs</p></div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="experience-block" data-aos="fade-up">
+      <h3>AI/ML Engineer — RUGVED Systems</h3>
+      <p>Apr 2024 – Present</p>
+      <ul>
+        <li>Patent-backed gunshot detection & localization system</li>
+        <li>Mentored 50+ juniors on ML, DL, CV</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Selected Work</h2>
+    <div class="project-gallery">
+      <div class="project-item" data-aos="zoom-in">
+        <div class="thumb">Image/Video</div>
+        <div class="project-info">
+          <h3>Gunshot Detection</h3>
+          <p>Real-time CNN + MobileNet classifier</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="section">
+    <h2>Certifications</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Coming Soon...</div>
+        <div class="swiper-slide">Coming Soon...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="edu-columns">
+      <div class="edu-block" style="background-image: url('dps.jpg');"></div>
+      <div class="edu-block" style="background-image: url('iitmadras.jpg');"></div>
+      <div class="edu-block" style="background-image: url('manipal.jpg');"></div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
