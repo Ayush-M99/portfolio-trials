@@ -1,133 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayush Mishra | Portfolio</title>
-
-  <!-- Fonts & External Libraries -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-  
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Mishra - AI/ML Engineer & Digital Experience Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-  <!-- Theme Toggle Button -->
-  <label class="theme-switch">
-    <input type="checkbox" class="theme-switch__checkbox">
-    <div class="theme-switch__container">
-      <div class="theme-switch__clouds"></div>
-      <div class="theme-switch__stars-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
-          <path d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447..." fill="currentColor" />
-        </svg>
-      </div>
-      <div class="theme-switch__circle-container">
-        <div class="theme-switch__sun-moon-container">
-          <div class="theme-switch__moon">
-            <div class="theme-switch__spot"></div>
-            <div class="theme-switch__spot"></div>
-            <div class="theme-switch__spot"></div>
-          </div>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo magnetic-element">
+                <span class="gradient-text">AM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link magnetic-element">Home</a></li>
+                <li><a href="#about" class="nav-link magnetic-element">About</a></li>
+                <li><a href="#domains" class="nav-link magnetic-element">Domains</a></li>
+                <li><a href="#experience" class="nav-link magnetic-element">Experience</a></li>
+                <li><a href="#projects" class="nav-link magnetic-element">Projects</a></li>
+                <li><a href="#education" class="nav-link magnetic-element">Education</a></li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </label>
-
-  <!-- Navbar -->
-  <header class="main-header">
-    <div class="logo">AYUSH MISHRA</div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#domain">Domain</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#education">Education</a></li>
-      </ul>
     </nav>
-  </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="about-content" data-aos="fade-up">
-      <h1>Hi, I'm Ayush</h1>
-      <p class="typewriter"></p>
-      <div class="social-links">
-        <a href="mailto:officially.ayush99@gmail.com">📧</a>
-        <a href="https://github.com/Ayush-M99">🐙</a>
-        <a href="https://linkedin.com/in/ayushmishra99">💼</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Domain Section -->
-  <section id="domain" class="section">
-    <h2>What I Do</h2>
-    <div class="domain-cards">
-      <div class="card" data-aos="fade-up"><h3>Machine Learning</h3><p>TensorFlow, PyTorch, CNNs, Scikit-learn</p></div>
-      <div class="card" data-aos="fade-up"><h3>Frontend</h3><p>HTML, CSS, JavaScript, React</p></div>
-      <div class="card" data-aos="fade-up"><h3>Backend</h3><p>Node.js, SQL, MongoDB</p></div>
-      <div class="card" data-aos="fade-up"><h3>Full-Stack</h3><p>REST APIs, GitHub Actions</p></div>
-      <div class="card" data-aos="fade-up"><h3>Robotics</h3><p>OpenCV, ROS, UAVs</p></div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="experience-block" data-aos="fade-up">
-      <h3>AI/ML Engineer — RUGVED Systems</h3>
-      <p>Apr 2024 – Present</p>
-      <ul>
-        <li>Patent-backed gunshot detection & localization system</li>
-        <li>Mentored 50+ juniors on ML, DL, CV</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Selected Work</h2>
-    <div class="project-gallery">
-      <div class="project-item" data-aos="zoom-in">
-        <div class="thumb">Image/Video</div>
-        <div class="project-info">
-          <h3>Gunshot Detection</h3>
-          <p>Real-time CNN + MobileNet classifier</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-name gradient-text">AYUSH MISHRA</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="typewriter-main">I help founders turn ideas into seamless digital experiences</span>
+                </h2>
+                <div class="hero-roles">
+                    <span class="role-tag">AI/ML Engineer</span>
+                    <span class="role-tag">Robotics Enthusiast</span>
+                    <span class="role-tag">Real-Time Systems</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn--primary magnetic-element">Explore My Work</a>
+                    <a href="mailto:officially.ayush99@gmail.com" class="btn btn--outline magnetic-element">Get In Touch</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Coming Soon...</div>
-        <div class="swiper-slide">Coming Soon...</div>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a passionate AI/ML Engineer and Robotics Enthusiast with expertise in creating intelligent systems that solve real-world problems. Currently pursuing dual degrees in Data Science and Information Technology, I combine theoretical knowledge with practical implementation to deliver innovative solutions.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50">50</span>
+                            <span class="stat-label">Juniors Mentored</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">2</span>
+                            <span class="stat-label">Degrees Pursuing</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1">1</span>
+                            <span class="stat-label">Patent-Backed Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Education -->
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <div class="edu-columns">
-      <div class="edu-block" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcache.careers360.mobi%2Fmedia%2Fschools%2Fsocial-media%2Fmedia-gallery%2F11543%2F2019%2F5%2F21%2FDelhi%2520Public%2520School-School%2520Building.jpg&f=1&nofb=1&ipt=b04550f3c7cac69c946424161c1d0add4b0f118c31c55e2ba72f8dd35df4873c');"></div>
-      <div class="edu-block" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.studyclap.com%2Fimg%2Finstitute%2Fcollege%2F1342_3iitm3.png&f=1&nofb=1&ipt=5ed5253d82b8266b23bf668fc12ff6d5f58a0b64e8fe1442ed7001963d1dfdc5');"></div>
-      <div class="edu-block" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.reviewcenter.in%2Fwp-content%2Fuploads%2F2016%2F02%2FManipal-University.jpg&f=1&nofb=1&ipt=7ac3a58596a1299109a8f30073c75b3946d4868b2e8e8e99367ccf7c6300cdc3');"></div>
-    </div>
-  </section>
+    <!-- Domains Section -->
+    <section id="domains" class="domains section">
+        <div class="container">
+            <h2 class="section-title">Domains of Expertise</h2>
+            <div class="domains-grid">
+                <div class="domain-card magnetic-element glass-card">
+                    <div class="domain-icon">🤖</div>
+                    <h3 class="domain-title">Machine Learning</h3>
+                    <p class="domain-description">TensorFlow, PyTorch, CNNs, Scikit-learn</p>
+                </div>
+                <div class="domain-card magnetic-element glass-card">
+                    <div class="domain-icon">🎨</div>
+                    <h3 class="domain-title">Frontend</h3>
+                    <p class="domain-description">HTML, CSS, JavaScript, React</p>
+                </div>
+                <div class="domain-card magnetic-element glass-card">
+                    <div class="domain-icon">⚙️</div>
+                    <h3 class="domain-title">Backend</h3>
+                    <p class="domain-description">Node.js, SQL, MongoDB</p>
+                </div>
+                <div class="domain-card magnetic-element glass-card">
+                    <div class="domain-icon">🔗</div>
+                    <h3 class="domain-title">Full-Stack</h3>
+                    <p class="domain-description">REST APIs, GitHub Actions</p>
+                </div>
+                <div class="domain-card magnetic-element glass-card">
+                    <div class="domain-icon">🦾</div>
+                    <h3 class="domain-title">Robotics</h3>
+                    <p class="domain-description">OpenCV, ROS, UAVs</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">AI/ML Engineer</h3>
+                            <span class="timeline-company">RUGVED Systems</span>
+                            <span class="timeline-period">Apr 2024 – Present</span>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Patent-backed gunshot detection & localization system</li>
+                            <li>Mentored 50+ juniors on ML, DL, CV</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card magnetic-element glass-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">🎯</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Gunshot Detection</h3>
+                        <p class="project-description">Real-time CNN + MobileNet classifier for accurate gunshot detection and localization system with patent-backed technology.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">CNN</span>
+                            <span class="project-tag">MobileNet</span>
+                            <span class="project-tag">Real-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card glass-card">
+                    <div class="education-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcache.careers360.mobi%2Fmedia%2Fschools%2Fsocial-media%2Fmedia-gallery%2F11543%2F2019%2F5%2F21%2FDelhi%2520Public%2520School-School%2520Building.jpg" alt="Delhi Public School" loading="lazy">
+                        <div class="education-overlay"></div>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">High School Graduate</h3>
+                        <h4 class="education-institution">Delhi Public School</h4>
+                        <span class="education-period">Graduated: 2023</span>
+                    </div>
+                </div>
+                <div class="education-card glass-card">
+                    <div class="education-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.studyclap.com%2Fimg%2Finstitute%2Fcollege%2F1342_3iitm3.png" alt="IIT Madras" loading="lazy">
+                        <div class="education-overlay"></div>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">BSc Data Science & Applications</h3>
+                        <h4 class="education-institution">IIT Madras</h4>
+                        <span class="education-period">Sep 2023 – May 2027</span>
+                        <span class="education-cgpa">CGPA: 7.00</span>
+                        <p class="education-courses">Statistics, Python, Mathematics for Data Structures</p>
+                    </div>
+                </div>
+                <div class="education-card glass-card">
+                    <div class="education-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.reviewcenter.in%2Fwp-content%2Fuploads%2F2016%2F02%2FManipal-University.jpg" alt="Manipal Institute of Technology" loading="lazy">
+                        <div class="education-overlay"></div>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">BTech Information Technology</h3>
+                        <h4 class="education-institution">Manipal Institute of Technology</h4>
+                        <span class="education-period">Jul 2023 – May 2027</span>
+                        <span class="education-cgpa">CGPA: 7.94</span>
+                        <p class="education-courses">DSA, OOP, OS, CN, DBMS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="mailto:officially.ayush99@gmail.com" class="footer-link magnetic-element" target="_blank">Email</a>
+                    <a href="https://github.com/Ayush-M99" class="footer-link magnetic-element" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/ayushmishra99" class="footer-link magnetic-element" target="_blank">LinkedIn</a>
+                </div>
+                <p class="footer-text">© 2025 Ayush Mishra. Crafted with passion and precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
